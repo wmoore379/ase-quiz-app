@@ -1,7 +1,7 @@
 {
   "name": "ASE Pro Prep",
   "short_name": "ASE Pro",
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#0B1120",
   "theme_color": "#3B82F6",
@@ -10,6 +10,12 @@
     {
       "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Eo_circle_blue_white_wrench.svg/512px-Eo_circle_blue_white_wrench.svg.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Eo_circle_blue_white_wrench.svg/192px-Eo_circle_blue_white_wrench.svg.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     }
