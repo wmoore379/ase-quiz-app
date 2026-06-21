@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASE Pro Prep</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>ASE Pro</h1>
+        <button id="home-btn" class="hidden">Dashboard</button>
+        <button id="reset-btn" class="text-btn" style="position:absolute; right:20px; top: 20px; margin:0; color:var(--error-color); font-size:0.8rem;">Reset Data</button>
+    </header>
+
+    <main id="app-container">
+        
+        <!-- DASHBOARD VIEW -->
+        <section id="dashboard-view">
+            <div class="qotd-card">
+                <h2>Question of the Day</h2>
+                <p id="qotd-streak">🔥 Streak: 0</p>
+                <button id="btn-qotd" class="primary-btn">Take Daily Challenge</button>
+            </div>
+
+            <div class="diagnostic-card">
+                <h2>Diagnostic Baseline</h2>
+                <p>Test your knowledge across all categories.</p>
+                <button id="btn-baseline" class="secondary-btn">Test Your Knowledge</button>
+            </div>
+
+            <h2>Categories & Probability</h2>
+            <div id="category-grid" class="category-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- TEST CONFIG VIEW -->
+        <section id="config-view" class="hidden">
+            <button id="back-to-dash-btn" class="text-btn">← Back</button>
+            <h2 id="config-title">A1 - Engine Repair</h2>
+            <p>Select your testing mode:</p>
+            <div class="mode-selector">
+                <div class="mode-card" id="btn-short-quiz">
+                    <h3>Practice Quiz</h3>
+                    <p>~20 questions with instant explanations.</p>
+                </div>
+                <div class="mode-card" id="btn-full-exam">
+                    <h3>Full Exam Simulator</h3>
+                    <p>Official length. No instant feedback. Review at the end.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ VIEW -->
+        <section id="quiz-view" class="hidden">
+            <div class="quiz-header">
+                <span id="quiz-mode-badge" class="badge">Mode</span>
+                <span id="question-counter">1 / X</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            
+            <h3 id="question-text">Loading question...</h3>
+            
+            <div id="options-container" class="options-container">
+                <!-- Options populated by JS -->
+            </div>
+
+            <div id="explanation-drawer" class="explanation-drawer hidden">
+                <h4 id="result-title">Result</h4>
+                <p id="explanation-text">Explanation goes here.</p>
+                <button id="next-btn" class="primary-btn">Next Question</button>
+            </div>
+        </section>
+
+        <!-- SCORE/REVIEW VIEW -->
+        <section id="score-view" class="hidden">
+            <h2>Test Complete!</h2>
+            <h1 id="score-text">100%</h1>
+            <p id="score-details">You answered X out of Y correctly.</p>
+            
+            <div id="probability-update-msg" class="probability-msg"></div>
+            
+            <div id="review-container" class="review-container hidden">
+                <h3>Exam Review</h3>
+                <div id="review-list"></div>
+            </div>
+
+            <button id="finish-btn" class="primary-btn">Return to Dashboard</button>
+        </section>
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
